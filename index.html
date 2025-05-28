@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícia Burger - Cardápio</title>
+    <style>
+        /* Reset e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slogan {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Seções do cardápio */
+        .menu-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #dd2476;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ff512f;
+            display: inline-block;
+        }
+        
+        /* Grid de itens */
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .menu-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .item-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .item-details {
+            padding: 1.5rem;
+        }
+        
+        .item-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .item-description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .item-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #dd2476;
+        }
+        
+        /* Rodapé */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #dd2476;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+        
+        /* Efeitos especiais */
+        .highlight {
+            position: relative;
+        }
+        
+        .highlight::after {
+            content: "★ Mais pedido";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Delícia Burger</div>
+        <div class="slogan">Sabor que conquista desde 2010</div>
+    </header>
+    
+    <div class="container">
+        <section class="menu-section">
+            <h2 class="section-title">Hambúrgueres Artesanais</h2>
+            <div class="menu-items">
+                <div class="menu-item highlight">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Delícia Clássico</h3>
+                        <p class="item-description">Pão brioche, hambúrguer 180g, queijo cheddar, bacon, alface, tomate e molho especial.</p>
+                        <div class="item-price">R$ 24,90</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Vegetariano Supremo</h3>
+                        <p class="item-description">Pão integral, hambúrguer de grão-de-bico, queijo coalho, abacate, rúcula e molho de iogurte.</p>
+                        <div class="item-price">R$ 22,50</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1561758033-48d52648ae8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Picante Mexicano</h3>
+                        <p class="item-description">Pão australiano, hambúrguer 200g, queijo jalapeño, pimenta, guacamole e nachos.</p>
+                        <div class="item-price">R$ 27,90</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-section">
+            <h2 class="section-title">Acompanhamentos</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Batata Frita Crocante</h3>
+                        <p class="item-description">Porção generosa de batata frita crocante com molho à escolha.</p>
+                        <div class="item-price">R$ 12,90</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Onion Rings</h3>
+                        <p class="item-description">Anéis de cebola empanados e crocantes, acompanha molho barbecue.</p>
+                        <div class="item-price">R$ 14,50</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1606755456206-b25206cde27e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Salada Caesar</h3>
+                        <p class="item-description">Mix de folhas, croutons, parmesão e molho caesar tradicional.</p>
+                        <div class="item-price">R$ 16,90</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-section">
+            <h2 class="section-title">Bebidas</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1513309914637-65c20a5962e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Refrigerantes</h3>
+                        <p class="item-description">Coca-Cola, Guaraná, Fanta, Sprite - 350ml.</p>
+                        <div class="item-price">R$ 6,50</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Sucos Naturais</h3>
+                        <p class="item-description">Laranja, Abacaxi com Hortelã, Morango - 500ml.</p>
+                        <div class="item-price">R$ 10,90</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1436076863939-06870fe779c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="item-details">
+                        <h3 class="item-name">Milkshakes</h3>
+                        <p class="item-description">Chocolate, Morango, Ovomaltine - 400ml.</p>
+                        <div class="item-price">R$ 15,90</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="contact-info">
+            <p>Rua dos Sabores, 123 - Centro | Telefone: (11) 1234-5678</p>
+            <p>Horário de funcionamento: Terça a Domingo, 11h às 23h</p>
+        </div>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">👍</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
+        </div>
+        <p>&copy; 2023 Delícia Burger - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
